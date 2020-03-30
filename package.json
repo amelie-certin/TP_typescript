@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/amelie-certin/TP_typescript/issues"
   },
-  "homepage": "https://github.com/amelie-certin/TP_typescript#readme"
+  "homepage": "https://github.com/amelie-certin/TP_typescript#readme",
+  "dependencies": {
+    "typescript": "^3.8.3"
+  }
 }
