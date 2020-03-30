@@ -1,10 +1,12 @@
 class Pokemon {
-    private name: string;
-
-    constructor(name: string) {
+    constructor(private name: string, private speed: number) {
         this.name = name;
+        this.speed = speed;
+    }
+
+    calculateSpeed() : number {
+        return this.speed;
     }
 }
 
-const pokemon = new Pokemon("Evoli");
-console.log(pokemon);
+export { Pokemon };
