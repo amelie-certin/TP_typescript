@@ -1,5 +1,5 @@
 class Move {
-    constructor(private name: string, private power: number) {
+    constructor(private name: string, public power: number) {
         this.name = name;
         this.power = power;
     }

@@ -7,8 +7,8 @@ class Stats {
         this.speed = speed;
     }
 
-    calculateDamage() {
-        return this.offensive;
+    calculateDamage(power : number) {
+        return Math.floor(Math.floor(Math.floor(2 * this.level / 5 + 2) * this.offensive * power / this.defensive) / 50) + 2;
     }
 
     calculateSpeed() {

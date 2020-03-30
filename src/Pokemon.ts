@@ -2,10 +2,12 @@ import { Stats } from "./Stats"
 import { Move } from "./Move";
 
 class Pokemon {
-    constructor(private name: string, private stats: Stats, private moves?: Move[]) {
+    private moves: Move[];
+
+    constructor(private name: string, private stats: Stats) {
         this.name = name;
         this.stats = stats;
-        this.moves = moves ? moves : this.initDefaultMoves();
+        this.moves = this.initDefaultMoves();
     }
 
     initDefaultMoves() {
@@ -22,7 +24,8 @@ class Pokemon {
     }
 
     attack() : number {
-        return this.stats.calculateDamage();
+        const move = this.moves[0];
+        return this.stats.calculateDamage(move.power);
     }
 }
 
