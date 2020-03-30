@@ -23,9 +23,9 @@ class Pokemon {
         return this.stats.calculateSpeed();
     }
 
-    attack() : number {
+    attack(defense : number) : number {
         const move = this.moves[0];
-        return this.stats.calculateDamage(move.power);
+        return this.stats.calculateDamage(move.power, defense);
     }
 }
 

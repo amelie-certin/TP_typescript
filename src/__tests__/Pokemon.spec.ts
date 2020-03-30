@@ -16,7 +16,7 @@ describe("Pokemon", () => {
             const stats = new Stats(1, 1, 20, 1, 18);
             const pokemon = new Pokemon("Evoli", stats);
 
-            expect(pokemon.attack()).toEqual(50);
+            expect(pokemon.attack(20)).toEqual(4);
         });
     });
 });

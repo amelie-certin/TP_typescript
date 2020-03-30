@@ -13,7 +13,7 @@ describe("Stats", () => {
         it("returns offensive", () => {
             const stats = new Stats(1, 1, 20, 1, 18);
 
-            expect(stats.calculateDamage(60)).toEqual(50);
+            expect(stats.calculateDamage(60, 20)).toEqual(4);
         });
     });
 });
