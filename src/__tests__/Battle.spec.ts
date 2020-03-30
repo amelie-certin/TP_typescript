@@ -18,5 +18,13 @@ describe("Battle", () => {
 
             expect(battle.attackOrder()).toEqual([opponent, pokemon]);
         });
+
+        it("alters order if equal", () => {
+            const pokemon = new Pokemon("Evoli", 35);
+            const opponent = new Pokemon("Pikachu", 35);
+            const battle = new Battle(pokemon, opponent);
+
+            expect(battle.attackOrder()).toEqual([opponent, pokemon]);
+        });
     });
 });
