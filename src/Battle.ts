@@ -8,7 +8,7 @@ class Battle {
 
     attackOrder() : Pokemon[] {
         return [this.opponent, this.pokemon].sort((a, b) => {
-            return b.calculateSpeed() - a.calculateSpeed();
+            return b.speed() - a.speed();
         });
     }
 }

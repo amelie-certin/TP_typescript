@@ -1,11 +1,22 @@
 import { Pokemon } from "../Pokemon";
+import { Stats } from "../Stats";
 
 describe("Pokemon", () => {
-    describe("calculateSpeed", () => {
+    describe("speed", () => {
         it("returns speed", () => {
-            const pokemon = new Pokemon("Evoli", 18);
+            const stats = new Stats(1, 1, 20, 1, 18);
+            const pokemon = new Pokemon("Evoli", stats);
 
-            expect(pokemon.calculateSpeed()).toEqual(18);
+            expect(pokemon.speed()).toEqual(18);
+        });
+    });
+
+    describe("attack", () => {
+        it("returns attack", () => {
+            const stats = new Stats(1, 1, 20, 1, 18);
+            const pokemon = new Pokemon("Evoli", stats);
+
+            expect(pokemon.attack()).toEqual(20);
         });
     });
 });
