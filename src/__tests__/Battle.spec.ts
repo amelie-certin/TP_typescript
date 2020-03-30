@@ -2,7 +2,7 @@ import { Pokemon } from "../Pokemon";
 import { Battle } from "../Battle";
 
 describe("Battle", () => {
-    describe("attack_order", () => {
+    describe("attackOrder", () => {
         it("returns the fastest pokemon: Evoli", () => {
             const pokemon = new Pokemon("Evoli", 20);
             const opponent = new Pokemon("Pikachu", 15);
