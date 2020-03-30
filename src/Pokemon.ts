@@ -3,10 +3,12 @@ import { Move } from "./Move";
 
 class Pokemon {
     private moves: Move[];
+    public hp: number;
 
-    constructor(private name: string, private stats: Stats) {
+    constructor(public name: string, private stats: Stats) {
         this.name = name;
         this.stats = stats;
+        this.hp = this.stats.calculateHpMax();
         this.moves = this.initDefaultMoves();
     }
 
@@ -26,6 +28,14 @@ class Pokemon {
     attack(defense : number) : number {
         const move = this.moves[0];
         return this.stats.calculateDamage(move.power, defense);
+    }
+
+    defense() : number {
+        return this.stats.calculateDefense();
+    }
+
+    take(damage : number) {
+        this.hp -= damage;
     }
 }
 

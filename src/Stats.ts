@@ -14,6 +14,14 @@ class Stats {
     calculateSpeed() {
         return this.speed;
     }
+
+    calculateHpMax() {
+        return this.hp;
+    }
+
+    calculateDefense() : number {
+        return this.defensive;
+    }
 }
 
 export { Stats };

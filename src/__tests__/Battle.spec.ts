@@ -37,4 +37,17 @@ describe("Battle", () => {
             expect(battle.attackOrder()).toEqual([opponent, pokemon]);
         });
     });
+
+    describe("run", () => {
+        it("Pikachu VS Evoli", () => {
+          const pokemonStats = new Stats(5, 55, 55, 50, 35);
+          const pokemon = new Pokemon("Evoli", pokemonStats);
+
+          const opponentStats = new Stats(5, 35, 55, 40, 90);
+          const opponent = new Pokemon("Pikachu", opponentStats);
+          const battle = new Battle(pokemon, opponent);
+
+          expect(battle.run()).toBe(opponent);
+        });
+    });
 });
