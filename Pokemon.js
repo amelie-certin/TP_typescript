@@ -3,3 +3,6 @@ class Pokemon {
         this.name = name;
     }
 }
+
+const pokemon = new Pokemon("Evoli");
+console.log(pokemon);
